@@ -9,7 +9,9 @@ class Pelanggan extends Model
 {
     use HasFactory;
     protected $table = 'pelanggan';
-    protected $guarded = [
-        'id'
-    ];
+    protected $guarded = ['id'];
+
+    public function transaksi() {
+        return $this->hasMany(Transaksi::class);
+    }
 }

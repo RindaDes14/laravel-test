@@ -11,9 +11,7 @@ class Mahasiswa extends Model
     //cara mengkoneksi model dengan tabel
     protected $table = 'mahasiswa';
     //data kolom yang tidak boleh di isi
-    protected $guarded = [
-        'id'
-    ];
+    protected $guarded = ['id'];
     
     //data kolom yang boleh di isi
     // protected $fillable = [
