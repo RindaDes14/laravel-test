@@ -22,6 +22,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/mahasiswa', [MahasiswaControler::class, 'index']);
 
-Route::post('/produk', [ProdukController::class,'store']);
+// Route::post('/produk', [ProdukController::class, 'store']);
 
-Route::get('/produk', [ProdukController::class, 'index']);
+// Route::get('/produk', [ProdukController::class, 'index']);
+
+// Route::delete('/produk/{produk}', [ProdukController::class, 'destroy']);
+
+// Route::get('/produk/{produk}', [ProdukController::class, 'show']);
+
+// Route::put('/produk/{produk}', [ProdukController::class, 'update']);
+
+Route::resource('/produk', ProdukController::class);
